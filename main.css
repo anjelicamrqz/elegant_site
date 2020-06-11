@@ -243,8 +243,8 @@ nav #menu li a {
   .hero_text {
   color: #fff;
   font-weight: 400;
-  font-size: 7rem;
-  font-family: 'Roxxettefree';
+  font-size: 4.2rem;
+  font-family: 'Roxxettefree' sans-serif;
   display: flex;
   flex: 0 1 40vw;
   height: 80vh;
@@ -352,12 +352,14 @@ h3, .section_title {
     padding-right: 15rem;
     padding-left: 10rem;
     }
- 
 }
 
 @media screen and (max-width: 580px) {
     .hero_text {
-        margin-left: 3rem;
+        justify-content: center;
+        text-align: center;
+        font-size: 3.2rem;
+        margin-left: 4rem;
     }
 
 }
