@@ -1,0 +1,326 @@
+@font-face {
+    font-family: Roxxettefree;
+    src: url('../fonts/Roxxettefree.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+  }
+  
+  nav {
+    width: 100%;
+    background: #fff;
+    height: 70px;
+    position: static;
+    border-bottom: 2px solid #b49a5d;
+    z-index: 1;
+  }
+  
+  nav #brand {
+    float: left;
+    display: block;
+    padding: .20rem;
+    line-height: 70px;
+    font-size: 22px;
+    font-weight: bold;
+    margin-left: 10px;
+  }
+  
+  nav #brand a {
+    color:  #b49a5d;
+    transition: all 0.3s ease-out;
+    font-family: 'Playfair Display', serif;
+    font-weight: 300;
+  }
+  
+  nav #menu {
+    float: left;
+    left: 50%;
+    position: relative;
+  }
+  
+  nav #menu li {
+    display: inline-block;
+    padding: 0px 30px;
+    cursor: pointer;
+    line-height: 70px;
+    position: relative;
+    transition: all 0.3s ease-out;
+  }
+  
+  nav #menu li a {
+    color:  #b49a5d;
+    font-family: 'Muli', sans-serif;
+    font-weight: 400;
+  }
+  
+  #toggle {
+    overflow: hidden;
+    position: absolute;
+    right: 20px;
+    top: 14px;
+    z-index: 1000;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    float: right;
+    transition: all 0.3s ease-out;
+    visibility: hidden;
+    opacity: 0;
+  }
+  
+  #toggle .span {
+    height: 3px;
+    background: #b49a5d;
+    transition: all 0.3s ease-out;
+    backface-visibility: hidden;
+    margin: 5px auto;
+  }
+  
+  #toggle.on #one {
+    transform: rotate(45deg) translateX(10px) translateY(10px);
+  }
+  
+  #toggle.on #two {
+    opacity: 0;
+  }
+  
+  #toggle.on #three {
+    transform: rotate(-45deg) translateX(10px) translateX(-10px);
+  }
+  
+  #resize {
+    z-index: 1;
+    top: 0px;
+    position: absolute;
+    background: #fff;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 1s ease-out;
+    display: table;
+  }
+  
+  #resize #menu {
+    height: 50px;
+    display: table-cell;
+    vertical-align: center;
+  }
+  
+  #resize #menu li {
+    display: block;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 50px;
+    min-height: 80px;
+    font-weight: 300;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+  }
+  
+  #resize #menu li a {
+    color:  #b49a5d;
+    font-weight: 400;
+  }
+  
+  #resize.active {
+    visibility: visible;
+    opacity: 0.99;
+  }
+  
+  @media(max-width: 760px) {
+    #toggle {
+        visibility: visible;
+        opacity: 1;
+        margin-top: 6px;
+    }
+  
+    nav #brand {
+        margin-left: 18px;
+    }
+  
+    #menu a {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 200;
+        font-size: 20px;
+    }
+  
+    nav #menu {
+        display: none;
+    }
+  }
+  
+  @media(min-width: 760px) {
+    #resize {
+        visibility: hidden !important;
+    }
+  } 
+
+  .index-banner {
+    height: 60vh;
+    width: 100%;
+    background-image: url(./img/camera.jpg), linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: table;
+    opacity: 0.7;
+}
+
+.vertical-center {
+    display: table-cell;
+    vertical-align: middle
+}
+
+.index-banner h2 {
+    color: #fff;
+    font-weight: 400;
+    text-align: center;
+    width: 200px;
+    margin: 0px auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+h5 {
+    font-weight: 400;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-style: italic;
+    margin: 0; 
+    font-family: 'Roxxettefree';
+}
+
+.section, h5 {
+    text-align: center;
+    margin: 0px 60px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    text-align: center;
+    color: rgb(39, 42, 46);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+
+.main_footer, h3{
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 30px;
+    line-height: 1.4;
+}
+
+.main_footer {
+    padding: 20px 20px 30px;
+    border-top: 2px solid #b49a5d;
+    height: 30px;
+    text-align: center;
+    color: #b49a5d;
+}
+
+.social_media_list {
+    display: none;
+    list-style: none;
+    margin: 10px;
+}
+
+.social_media_list li {
+    display: inline-block;
+    margin-right: 1em;
+    font-size: 180%;
+}
+
+.social_media_list li a {
+    color: #b49a5d;
+    transition: color 0.5s; 
+}
+
+footer .footer_cols {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 30px 0 0;
+    text-align: left;
+    font-size: 14px;
+}
+
+footer .footer_cols ul {
+    list-style: none;
+}
+
+footer .footer_cols ul li {
+    font-size: 1.2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: #d7d8da solid 1px;
+    margin-bottom: 1rem;
+}
+
+footer li a{
+    color: #b49a5d;
+}
+
+footer .footer_bottom {
+    padding: 1rem;
+}
+
+
+/*-----------BUTTON-------------*/
+
+
+.btn {
+    padding: 15px 32px;
+    border: 1px #b49a5d solid;
+    margin: 2rem 0 0;
+    text-decoration: none;
+    color: #b49a5d;
+  }
+  
+  .btn_footer {
+    margin-top: 3rem;
+  }
+  
+  .btn:hover {
+    background-color: #ecd293;
+  }
+
+@media screen and (max-width: 780px) {
+
+}
+
+@media screen and (max-width: 580px) {
+    .container_footer, .footer_cols {
+      display: none;
+   }
+
+/*-------------SOCIAL MEDIA LIST---------------*/
+
+.social_media_list {
+ display: inline-block;
+ list-style: none;
+ align-items: center;
+ margin-left: 3rem;
+}
+
+.footer_bottom {
+ display: none;
+}
+}
+
+
+
+
+
+
+
+
+
+
