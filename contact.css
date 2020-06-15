@@ -157,14 +157,14 @@
 
   .container {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    margin-top: 8em;
+    float: left;
+  
     font-family: "Raleway, sans-serif";
   }
 
   .container {
-    width: 600px;
+    width: 500px;
   }
 
   .form-group {
@@ -173,7 +173,7 @@
 
   .form-label {
     font-size: .75em;
-    color: red;
+    color: #D4AF37;
     display: block;
     opacity: 0;
     transition: all .3s;
@@ -205,7 +205,7 @@
   }
 
   .form-control:invalid {
-    border-color:red;
+    border-color:#D4AF37;
   }
   .form-control:valid:focus {
     border-color: green;
@@ -213,17 +213,17 @@
 
   .btn {
     background: 0 0 #fff;
-    border: 1px solid #aaa;
+    border: 1px solid #D4AF37;
     border-radius: 3px;
-    color:red;
+    color:#D4AF37;
     font-size: 1em;
-    padding: 10 50px;
+    padding:  10px;
     text-transform: uppercase;
   }
 
   .btn:hover{
-    border-color: blue;
-    color: blue;
+    border-color: green;
+    color: green;
   }
 
   textarea {
@@ -234,3 +234,26 @@
     opacity: 1;
     transform: translateX(0px);
   }
+
+  .img {
+    display: block;
+    float: right;
+    border: 2px solid #b49a5d;
+    margin:  6em 4em;
+    /*padding: 90px;*/
+  }
+
+  @media screen and (max-width: 780px) {
+
+  }
+  
+  @media screen and (max-width: 580px) {
+      .container {
+        width:430px;
+        margin: 30px;
+      }
+      .img {
+        display: inline-block;
+        margin: 0;
+      }
+     }

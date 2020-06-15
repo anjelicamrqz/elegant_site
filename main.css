@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Muli:ital,wght@0,200;0,300;0,400;1,200&family=Playfair+Display&family=Varela+Round&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Muli:ital,wght@0,200;0,300;0,400;1,200&family=Playfair+Display&family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
 
 @font-face {
     font-family: Roxxettefree;
@@ -62,6 +63,10 @@ nav #menu li a {
     font-weight: 400;
 }
 
+nav, #menu li a:hover {
+    color: #ffb710;
+}
+
 #toggle {
     overflow: hidden;
     position: absolute;
@@ -79,10 +84,10 @@ nav #menu li a {
 
 #toggle .span {
     height: 3px;
-    background: #b49a5d;
+    background: #eecd81;
     transition: all 0.3s ease-out;
     backface-visibility: hidden;
-    margin: 5px auto;
+    margin: 4px auto;
 }
 
 #toggle.on #one {
@@ -241,10 +246,10 @@ nav #menu li a {
   /* ------------MAIN SECTION-------------*/
 
   .hero_text {
-  color: #fff;
+  color:#f5E4E4;
+  font-family: 'Playfair Display SC', serif;
   font-weight: 400;
   font-size: 4.2rem;
-  font-family: 'Roxxettefree' sans-serif;
   display: flex;
   flex: 0 1 40vw;
   height: 80vh;
@@ -253,42 +258,8 @@ nav #menu li a {
   text-align: center;
   padding-right: 1rem;
   padding-left: 1rem;
+  z-index: 10;
   }
-
-
-
-  .center_text {
-  display: flex;
-  flex: 0 1 40vw;
-  height: 80vh;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding-right: 1rem;
-  padding-left: 1rem;
-  }
-
-  
- .center_text {
-    color: rgb(255, 255, 255);
-    z-index: 999;
-    font-weight: 400;
-    font-size: 2.5rem;
-    text-transform: uppercase;
-    font-style: italic;
-    margin: 0; 
-    }
-
-  h2 {
-    font-family: 'Playfair Display SC', serif;
-    color: #fff;
-    text-shadow: 4px 4px 3px rgba(0,0,0,0.1); 
-  }
-
-
-.main_section {
-    background-color: #fff;
-}
 
 .main_section_title {
     color: #000102;
@@ -313,19 +284,14 @@ hr {
    margin: 0px 60px 20px;
    padding: 0px 40px;
    margin-bottom: 20vh;
-   text-align: center;
    align-items: center;
    justify-content: center;
-   font-weight: 800;
-   font-size: 28px;
    text-align: center;
-   color: rgb(39, 42, 46);
-   text-transform: uppercase;
    letter-spacing: 1px;
 }
 
 .section_content h3 {
-    font-size: 20px;
+    text-transform: uppercase;
     display: block;
     margin-block-start: 1em;
     margin-block-end: 1em;
@@ -337,10 +303,11 @@ h3, .section_title {
    color: #b49a5d;
 }
 
-.section_content h4 {
+.section_content p {
+    color:rgb(39, 42, 46);
     display: block;
-    font-size: 15px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Merriweather', serif;
+    font-size: 13px;
     margin-block-start: 1.33em;
     margin-block-end: 1.33em;
     margin-inline-start: 0px;
@@ -373,26 +340,25 @@ h3, .section_title {
 body { font-family: sans-serif; }
 
 .carousel {
-  background: #fff;
-  margin-bottom: 10vh;
-}
+    background: #fff;
+    margin-bottom: 10vh;
+  }
 
 .carousel-cell {
   width: 50%;
   height: 200px;
   margin-right: 10px;
-  background: #8C8;
   border-radius: 5px;
-  counter-increment: gallery-cell;
+ 
 }
 
 .carousel-cell:before {
     display: block;
     text-align: center;
-    content: counter(gallery-cell);
+    color: #fff;
     line-height: 200px;
     font-size: 80px;
-    color: #fff;
+   
 }
 
 #cell-1 {
@@ -569,7 +535,7 @@ footer .footer_bottom {
   }
   
   .btn:hover {
-    background-color: #ecd293;
+    background-color: #141414;
   }
 
 @media screen and (max-width: 780px) {
