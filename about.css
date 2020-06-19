@@ -59,9 +59,19 @@
     font-weight: 400;
   }
 
-  /*a:link { color: blue; }
-  a:visited { color: purple; }
-  */
+  nav, #menu li a:hover {
+    color: #ffb710;
+    transition: 0.3s ease-in;
+}
+
+  nav, #menu li a:link { 
+    color: blue;
+   }
+
+   nav, #menu li a:link { 
+     color: purple;
+     }
+  
   
   #toggle {
     overflow: hidden;
@@ -83,7 +93,7 @@
     background: #b49a5d;
     transition: all 0.3s ease-out;
     backface-visibility: hidden;
-    margin: 5px auto;
+    margin: 4px auto;
   }
   
   #toggle.on #one {

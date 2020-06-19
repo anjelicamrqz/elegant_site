@@ -1,93 +1,26 @@
-let galleryImages = document.querySelectorAll(".gallery-img");
-let getLatestOpenedImg;
-let windowWidth = window.innerWidth;
+const current = document.querySelector('#current'); 
+const imgs = document.querySelectorAll('.imgs img');
+const opacity = 0.6;
 
-if(galleryImages) {
-    galleryImages.forEach(function(image, index) {
-        image.onclick = function() {
-            let getElementCss = window.getComputedStyle(image);
-            let getFullImgUrl = getElementCss.getPropertyValue("background-image");
-            let getImgUrlPos = getFullImgUrl.split("/img/");
-            let setNewImgUrl = getImgUrlPos[1].replace('")','');
-            
-            getLatestOpenedImg = index + 1;
-            
-            let container = document.body;
-            let newImgWindow = document.createElement("div");
-            container.appendChild(newImgWindow);
-            newImgWindow.setAttribute("class", "img-window");
-            newImgWindow.setAttribute("onlick", "closeImg()");
+// Set first img opacity
+imgs[0].style.opacity = opacity;
 
-            let newImg = document.createElement("img");
-            newImgWindow.appendChild(newImg);
-            newImg.setAttribute("src", "img/" + setNewImgUrl);
-            newImg.setAttribute("id", "current-img");
+imgs.forEach(img => img.addEventListener('click',
+imgClick));
 
-            newImg.onload = function() {
-            let imgWidth = this.width;
-            let calcImgToEdge = ((windowWidth - imgWidth) / 2) - 80;
+function imgClick(e) {
+    // Reset to opacity
+    imgs.forEach(img => (img.style.opacity = 1));
+    // Change current image to src of clicked image
+    current.src = e.target.src;
 
-            let newNextBtn = document.createElement("a");
-            let btnNextText = document.createTextNode("Next");
-            newNextBtn.appendChild(btnNextText);
-            container.appendChild(newNextBtn);
-            newNextBtn.setAttribute("class", "img-btn-next");
-            newNextBtn.setAttribute("onclick", "changeImg(1)");
-            newNextBtn.style.cssText = "right: " + calcImgToEdge + "px;";
+    // Add fade in class
+    current.classList.add("fade-in");
 
-            let newPrevBtn = document.createElement("a");
-            let btnPrevText = document.createTextNode("Prev");
-            newPrevBtn.appendChild(btnPrevText);
-            container.appendChild(newPrevBtn);
-            newPrevBtn.setAttribute("class", "img-btn-prev");
-            newPrevBtn.setAttribute("onclick", "changeImg(0)");
-            newPrevBtn.style.cssText = "left: " + calcImgToEdge + "px;";
-            }
-    
-        }
-    });
-}
+    // Remove fade-in class after .5 seconds
+    setTimeout(() => current.classList.remove('fade-in'),
+    500);
 
-function closeImg() {
-    document.querySelector(".img-window").remove();
-    document.querySelector(".img-btn-next").remove();
-    document.querySelector(".img-btn-prev").remove();
-}
-
-function changeImg(changeDir) {
-    document.querySelector("#current-img").remove();
-
-    let getImgWindow = document.querySelector(".img-window");
-    let newImg = document.createElement("img");
-    getImgWindow.appendChild(newImg);
-
-    let calcNewImg;
-    if(changeDir === 1) {
-        calcNewImg = getLatestOpenedImg + 1;
-        if(calcNewImg > galleryImages.length) {
-            calcNewImg = 1;
-        }
-    }
-        else if(changeDir === 0) {
-            calcNewImg = getLatestOpenedImg - 1;
-            if(calcNewImg < 1) {
-                calcNewImg = galleryImages.length;
-         }
-     }
-
-     newImg.setAttribute("src", "img/img" + calcNewImg + ".jpg");
-     newImg.setAttribute("id", "current-img");
-
-     getLatestOpenedImg = calcNewImg;
-
-     newImg.onload = function() {
-         let imgWidth = this.width;
-         let calcImgToEdge = ((windowWidth - imgWidth) / 2) - 80;
-
-         let nextBtn = document.querySelector(".img-btn-next");
-         nextBtn.style.cssText = "right: " + calcImgToEdge + "px;";
-
-         let prevBtn = document.querySelector(".img-btn-next");
-         prevBtn.style.cssText = "right: " + calcImgToEdge + "px;";
-     }
+    // change the opacity to var 
+    e.target.style.opacity = opacity;
 }
