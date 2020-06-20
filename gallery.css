@@ -271,7 +271,8 @@ footer .footer_bottom {
 }
 
 .btn:hover {
-  background-color: #ecd293;
+  background-color: #b89c5c;
+  color: #fff;
 }
 
 @media screen and (max-width: 580px) {

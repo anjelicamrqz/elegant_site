@@ -134,7 +134,7 @@ nav, #menu li a:hover {
 }
 
 #resize #menu li a {
-    color:  #b49a5d;
+    color:  #9b9a99;
     font-weight: 400;
 }
 
@@ -326,7 +326,7 @@ h3, .section_title {
     .hero_text {
         justify-content: center;
         text-align: center;
-        font-size: 3.2rem;
+        font-size: 2rem;
         margin-left: 4rem;
     }
 
@@ -536,7 +536,8 @@ footer .footer_bottom {
   }
   
   .btn:hover {
-    background-color: #141414;
+    background-color: #b89c5c;
+    color: #fff;
   }
 
 @media screen and (max-width: 780px) {

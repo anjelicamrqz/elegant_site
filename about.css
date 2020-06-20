@@ -72,7 +72,6 @@
      color: purple;
      }
   
-  
   #toggle {
     overflow: hidden;
     position: absolute;
@@ -176,16 +175,16 @@
     }
   } 
 
-  .index-banner {
-    height: 60vh;
-    width: 100%;
-    background-image: url(./img/camera.jpg), linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
-    background-blend-mode: overlay;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    display: table;
-    opacity: 0.7;
+.index-banner {
+  height: 60vh;
+  width: 100%;
+  background-image: url(./img/camera.jpg), linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+  background-blend-mode: overlay;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: table;
+  opacity: 0.7;
 }
 
 .vertical-center {
@@ -309,7 +308,8 @@ footer .footer_bottom {
   }
   
   .btn:hover {
-    background-color: #ecd293;
+    background-color: #b89c5c;
+    color: #fff;
   }
 
 @media screen and (max-width: 780px) {
