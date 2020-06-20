@@ -295,4 +295,15 @@ footer .footer_bottom {
   .container_footer, .footer_cols {
     display: none;
  }
+ 
+ .social_media_list {
+  display: inline-block;
+  list-style: none;
+  align-items: center;
+  margin-left: 3rem;
+ }
+ 
+ .footer_bottom {
+  display: none;
+ }
 }
