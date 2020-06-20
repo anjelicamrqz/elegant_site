@@ -319,6 +319,7 @@ h3, .section_title {
     .hero_text {
     padding-right: 15rem;
     padding-left: 10rem;
+    font-size: 3rem;
     }
 }
 
@@ -326,7 +327,7 @@ h3, .section_title {
     .hero_text {
         justify-content: center;
         text-align: center;
-        font-size: 2rem;
+        font-size: 40px;
         margin-left: 4rem;
     }
 
