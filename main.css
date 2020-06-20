@@ -327,8 +327,7 @@ h3, .section_title {
     .hero_text {
         justify-content: center;
         text-align: center;
-        font-size: 40px;
-        margin-left: 4rem;
+        font-size: 3rem;
     }
 
 }
